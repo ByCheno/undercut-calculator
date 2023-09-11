@@ -10,13 +10,12 @@
     color: #e6ff68;
     border-radius: 25px;
     border: 2px solid rgb(248, 255, 153);
-    margin: 4px;
     cursor: pointer;
     user-select: none;
 }
 
 .button-container:hover{
-background-color: #6a9cff;
+background-color: #dce8ff;
 }
 
 .operator{

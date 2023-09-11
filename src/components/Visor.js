@@ -1,8 +1,8 @@
 import React from "react";
-
+import '../css/Visor.css';
 
 const Visor = ({ input }) =>(
-    <div className="input">
+    <div className="pantalla">
         {input}
     </div>
 );

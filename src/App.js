@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './img/amLogo.webp';
-import Button from './components/Button'
+import Button from './components/Button';
+import Visor from './components/Visor';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <img src={logo} className='am-logo' alt='Logo Aston Martin Prostitucion F1 Team'/>
       </div>
       <div className='calculadora-container'>
-        <div className='visor-container'></div>
+        <Visor />
         <div className='operations-container'>
           <Button child='7'/>
           <Button child='8'/>

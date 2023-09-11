@@ -25,14 +25,6 @@ html,body{
     align-items: center;
 }
 
-.visor-container{
-    margin-top: 2%;
-    background-color: #00584f;
-    width: 90%;
-    height: 70px;
-    border-radius: 5%;
-}
-
 .operations-container{
     width: 80%;
     background-color: #f4ff9f;

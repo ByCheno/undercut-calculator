@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Button.css';
 
 function Button(props){
     // Funcion que comprueba que no sea numero, punto o igual y devuelve true

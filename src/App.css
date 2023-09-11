@@ -34,9 +34,11 @@ html,body{
 }
 
 .operations-container{
-    margin-top: 2%;
+    width: 80%;
     background-color: #f4ff9f;
-    width: 90%;
-    height: 4.2em;
     border-radius: 5%;
+    display: flex; /* Esto asegura que los botones se alineen horizontalmente */
+    justify-content: space-between; /* Distribuye los botones uniformemente en el espacio disponible */
+    margin-top: 5%;
+    padding: 3%;
 }

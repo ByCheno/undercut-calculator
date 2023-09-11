@@ -1,3 +1,25 @@
-Button{
-    color: rgb(0, 0, 0);
+.button-container{
+    width: 20%;
+    height: 50px;
+    display: flex;
+    background-color: #00584f;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 38px;
+    color: #e6ff68;
+    border-radius: 25px;
+    border: 2px solid rgb(248, 255, 153);
+    margin: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button-container:hover{
+background-color: #6a9cff;
+}
+
+.operator{
+background-color: rgb(255, 255, 255);
+color: #00584f;
 }

@@ -1,0 +1,15 @@
+.Clear-Button{
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 50%; */
+    background-color: #36393e;
+    color: #e6ff68;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 25px;
+    border: 2px solid rgb(248, 255, 153);
+    cursor: pointer;
+    user-select: none;
+}

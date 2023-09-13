@@ -4,7 +4,7 @@ import '../css/Clear-Button.css';
 function ClearButton(props){
     return(    
     <div className="Clear-Button">
-        {props.child}
+        {props.children}
     </div>
     );
 }

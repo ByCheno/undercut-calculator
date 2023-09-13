@@ -2,21 +2,21 @@ import React from "react";
 import '../css/Button.css';
 
 function Button(props){
-    // Funcion que comprueba que no sea numero, punto o igual y devuelve true
+
+    // Funcion que comprueba si es operador o no
     const isOperator = value => {
-        const result = isNaN(value) && value !== '.' && value !== '=';
-        console.log(`Value: ${value}, isOperator: ${result}`);
-        return result;
+        return isNaN(value) && (value !== '.') && (value !== '=');
     };
 
-    console.log(`props.child: ${props.child}`);
+    // document.querySelector('.button-container').addEventListener('click', () => { props.controlVisor(props.children) });
+
 
     return (
-        <div className={`button-container ${isOperator(props.child) ? 'operator' : ''}`.trimEnd()}>
-            {props.child}
+        <div className={`button-container ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}
+        onClick={() => props.controlVisor(props.children) }>
+            {props.children}
         </div>
     );
 }
-
 
 export default Button;

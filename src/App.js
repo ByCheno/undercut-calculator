@@ -4,6 +4,7 @@ import Button from './components/Button';
 import Visor from './components/Visor';
 import ClearButton from './components/Clear-Button';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -12,7 +13,15 @@ function App() {
   const addInput = val => {
     // Concatena el valor con el otro valor del boton pulsado
     setInput(inputState + val);
-  }
+  };
+
+  const calculateOperations = () => {
+      if(inputState){
+          setInput(evaluate(inputState));
+      }else{
+          alert('Ingrese valores para poder operar');
+      }
+  };
 
   return (
     <div className="App">
@@ -22,32 +31,33 @@ function App() {
         <div className='calculadora-container'>
             <Visor input={inputState}/>
             <div className='operations-container'>
-              <Button controlVisor={addInput}>%</Button>
-              <Button controlVisor={addInput}>/</Button>
-              <ClearButton>Clear</ClearButton>
+              <Button onclick={addInput}>%</Button>
+              <Button onclick={addInput}>/</Button>
+              {/* Defino la funcion en el propio prop del componente puesto que es muy simple */}
+              <ClearButton reset={ () => setInput('')}>Clear</ClearButton>
             </div>
             <div className='operations-container'>
-              <Button controlVisor={addInput}>7</Button>
-              <Button controlVisor={addInput}>8</Button>
-              <Button controlVisor={addInput}>9</Button>
-              <Button controlVisor={addInput}>x</Button>
+              <Button onclick={addInput}>7</Button>
+              <Button onclick={addInput}>8</Button>
+              <Button onclick={addInput}>9</Button>
+              <Button onclick={addInput}>*</Button>
             </div>
             <div className='operations-container'>
-              <Button controlVisor={addInput}>4</Button>
-              <Button controlVisor={addInput}>5</Button>
-              <Button controlVisor={addInput}>6</Button>
-              <Button controlVisor={addInput}>-</Button>
+              <Button onclick={addInput}>4</Button>
+              <Button onclick={addInput}>5</Button>
+              <Button onclick={addInput}>6</Button>
+              <Button onclick={addInput}>-</Button>
             </div>
             <div className='operations-container'>
-              <Button controlVisor={addInput}>1</Button>
-              <Button controlVisor={addInput}>2</Button>
-              <Button controlVisor={addInput}>3</Button>
-              <Button controlVisor={addInput}>+</Button>
+              <Button onclick={addInput}>1</Button>
+              <Button onclick={addInput}>2</Button>
+              <Button onclick={addInput}>3</Button>
+              <Button onclick={addInput}>+</Button>
             </div>
             <div className='operations-container'>
-              <Button controlVisor={addInput}>0</Button>
-              <Button controlVisor={addInput}>.</Button>
-              <Button controlVisor={addInput}>=</Button>
+              <Button onclick={addInput}>0</Button>
+              <Button onclick={addInput}>.</Button>
+              <Button onclick={calculateOperations}>=</Button>
             </div>
         </div>
     </div>

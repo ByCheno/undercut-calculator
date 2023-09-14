@@ -2,10 +2,12 @@ import React from "react";
 import '../css/Clear-Button.css';
 
 function ClearButton(props){
+
     return(    
-    <div className="Clear-Button">
-        {props.children}
-    </div>
+        <div className="Clear-Button"
+            onClick={ props.reset }>
+            {props.children}
+        </div>
     );
 }
 
